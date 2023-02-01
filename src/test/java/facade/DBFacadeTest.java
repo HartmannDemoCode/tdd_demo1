@@ -50,6 +50,9 @@ class DBFacadeTest {
     @Test
     public void test() throws SQLException {
         System.out.println("Testing database connection, to see first name");
+        try (Connection connection = con = DBconnector.connection()) {
+
+        }
         String sql = "SELECT fname FROM startcode_test.usertable";
         try (ResultSet set = con.prepareStatement(sql).executeQuery()) {
             set.next();
