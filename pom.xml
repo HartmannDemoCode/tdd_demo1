@@ -24,7 +24,7 @@
     </dependencies>
 
     <properties>
-        <remote.server>http://edu.bugelhartmann.dk/manager/text</remote.server>
+        <remote.server>https://edu.bugelhartmann.dk/manager/text</remote.server>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
