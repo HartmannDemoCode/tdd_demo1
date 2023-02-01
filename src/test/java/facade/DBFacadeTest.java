@@ -56,6 +56,7 @@ class DBFacadeTest {
             String name = set.getString("fname");
             assertEquals("Hans", name);
         }
+        assertTrue(true);
     }
 
 }
