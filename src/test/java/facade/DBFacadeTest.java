@@ -48,7 +48,7 @@ class DBFacadeTest {
     }
 
     @Test
-    public void test() throws SQLException {
+    public void test() throws SQLException, ClassNotFoundException {
         System.out.println("Testing database connection, to see first name");
         try (Connection connection = con = DBconnector.connection()) {
 
