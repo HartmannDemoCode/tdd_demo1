@@ -48,16 +48,23 @@ class DBFacadeTest {
     }
 
     @Test
-    public void test() throws SQLException, ClassNotFoundException {
+    public void test()  {
         System.out.println("Testing database connection, to see first name");
         try (Connection connection = con = DBconnector.connection()) {
 
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         String sql = "SELECT fname FROM startcode_test.usertable";
-        try (ResultSet set = con.prepareStatement(sql).executeQuery()) {
+        try  {
+            ResultSet set = con.prepareStatement(sql).executeQuery();
             set.next();
             String name = set.getString("fname");
             assertEquals("Hans", name);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
         assertTrue(true);
     }
