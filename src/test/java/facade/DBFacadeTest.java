@@ -56,6 +56,7 @@ class DBFacadeTest {
             ResultSet set = con.prepareStatement(sql).executeQuery();
             set.next();
             String name = set.getString("fname");
+            System.out.println("NAME::::::::: = " + name);
             assertEquals("Hans", name);
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
